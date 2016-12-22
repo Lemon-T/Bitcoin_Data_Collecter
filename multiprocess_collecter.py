@@ -32,7 +32,6 @@ def getNumRows(table):
 	res = cursor.fetchone()
 	return res[0]
 
-
 def initAutoIncrement(table):
 	cursor = db.cursor()
 	num = getNumRows(table)
@@ -194,7 +193,6 @@ class ConsumerProcess(multiprocessing.Process):
 			address = self.checkAddress(scriptPubKey)
 			value = voutItem['value']
 			self.results.append((address, value, lastTx, outTxId))
-
 
 	# Collected the information of all the addresses in a transaction
 	def recordAddrInfo(self, access):
